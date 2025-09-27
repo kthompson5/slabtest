@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="SlabMetrics — transparent suggested grades, pro reports, and flexible display options." />
+  <meta property="og:title" content="SlabMetrics" />
+  <meta property="og:description" content="Transparent suggested grades, pro reports, and flexible display options." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="/assets/favicon.ico" />
+  <link rel="stylesheet" href="/css/styles.css" />
+
+<title>Grading Standards — SlabMetrics</title>
+<script defer src="/js/main.js"></script>
+<script defer src="/js/standards-calc.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/index.html" class="brand">
+        <img src="/assets/logo.png" alt="SlabMetrics" class="logo" />
+        <span>SLABMETRICS</span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav">☰</button>
+      <nav id="nav" class="nav">
+        <a href="/submit.html">Submit</a>
+        <a href="/grading-standards.html">Standards</a>
+        <a href="/services.html">Services</a>
+        <a href="/examples.html">Examples</a>
+        <a href="/tools/centering.html">Tools</a>
+        <a href="/faq.html">FAQ</a>
+        <a href="/contact.html">Contact</a>
+        <a href="/blog/index.html">Blog</a>
+      </nav>
+    </div>
+  </header>
+
+<section class="section">
+  <div class="container">
+    <h1>Grading Standards</h1>
+    <p>We grade on a 1–10 scale for each category on <strong>Front</strong> and <strong>Back</strong>:</p>
+    <ul>
+      <li><strong>Surface (S)</strong></li>
+      <li><strong>Centering (C)</strong></li>
+      <li><strong>Edges (E)</strong> — average of 4 edges</li>
+      <li><strong>Corners (K)</strong> — average of 4 corners</li>
+    </ul>
+    <p>Formula:</p>
+    <div class="card">
+      <pre class="mono">Front = (S_f + C_f + E_f + K_f) / 4
+Back  = (S_b + C_b + E_b + K_b) / 4
+SM    = 0.80 × Front + 0.20 × Back</pre>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container grid grid-2">
+    <div class="card">
+      <h2>Mini Calculator</h2>
+      <form id="sm-calc">
+        <div class="row cols-2">
+          <div><label>Front Surface</label><input id="Sf" value="9.0" type="number" min="0" max="10" step="0.1" /></div>
+          <div><label>Front Centering</label><input id="Cf" value="8.5" type="number" min="0" max="10" step="0.1" /></div>
+        </div>
+        <div class="row cols-2">
+          <div><label>Front Edges (avg)</label><input id="Ef" value="9.0" type="number" min="0" max="10" step="0.1" /></div>
+          <div><label>Front Corners (avg)</label><input id="Kf" value="9.0" type="number" min="0" max="10" step="0.1" /></div>
+        </div>
+        <div class="row cols-2">
+          <div><label>Back Surface</label><input id="Sb" value="8.5" type="number" min="0" max="10" step="0.1" /></div>
+          <div><label>Back Centering</label><input id="Cb" value="9.0" type="number" min="0" max="10" step="0.1" /></div>
+        </div>
+        <div class="row cols-2">
+          <div><label>Back Edges (avg)</label><input id="Eb" value="8.5" type="number" min="0" max="10" step="0.1" /></div>
+          <div><label>Back Corners (avg)</label><input id="Kb" value="8.8" type="number" min="0" max="10" step="0.1" /></div>
+        </div>
+      </form>
+    </div>
+    <div class="center">
+      <div>
+        <div class="grade-ring" data-ring>
+          <div class="grade-ring-inner"><span class="mono" data-ring-out>—</span></div>
+        </div>
+        <p class="meta" style="text-align:center;margin-top:8px;">
+          <strong>Front</strong>: <span id="out-front">—</span> •
+          <strong>Back</strong>: <span id="out-back">—</span> •
+          <strong>SM</strong>: <span id="out-sm">—</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+  <footer class="site-footer">
+    <div class="container foot">
+      <div class="cols">
+        <div>
+          <strong>SlabMetrics</strong><br/>
+          Transparent suggested grades, pro reports, and flexible display options.
+        </div>
+        <div class="links">
+          <a href="/services.html">Services & Pricing</a>
+          <a href="/big4.html">Big 4 Overview</a>
+          <a href="/emerging.html">Emerging Graders</a>
+          <a href="/grading-101.html">Card Grading 101</a>
+        </div>
+        <div>
+          <a class="btn btn-primary" href="/submit.html">Submit Cards</a>
+        </div>
+      </div>
+      <p class="tiny">© 2025 SlabMetrics. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
