@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="SlabMetrics — transparent suggested grades, pro reports, and flexible display options." />
+  <meta property="og:title" content="SlabMetrics" />
+  <meta property="og:description" content="Transparent suggested grades, pro reports, and flexible display options." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="/assets/favicon.ico" />
+  <link rel="stylesheet" href="/css/styles.css" />
+
+<title>Submit — SlabMetrics</title>
+<script defer src="/js/main.js"></script>
+<script defer src="/js/submit-form.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/index.html" class="brand">
+        <img src="/assets/logo.png" alt="SlabMetrics" class="logo" />
+        <span>SLABMETRICS</span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav">☰</button>
+      <nav id="nav" class="nav">
+        <a href="/submit.html">Submit</a>
+        <a href="/grading-standards.html">Standards</a>
+        <a href="/services.html">Services</a>
+        <a href="/examples.html">Examples</a>
+        <a href="/tools/centering.html">Tools</a>
+        <a href="/faq.html">FAQ</a>
+        <a href="/contact.html">Contact</a>
+        <a href="/blog/index.html">Blog</a>
+      </nav>
+    </div>
+  </header>
+
+<section class="section">
+  <div class="container">
+    <h1>Submit Your Cards</h1>
+    <p class="meta">Complete the form below. You'll receive a printable summary to include with your shipment.</p>
+    <form id="submit-form" class="card">
+      <div class="row cols-2">
+        <div>
+          <label for="name">Name</label>
+          <input id="name" name="name" required/>
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input id="email" type="email" name="email" required/>
+        </div>
+      </div>
+      <div class="row cols-2">
+        <div>
+          <label for="service">Service</label>
+          <select id="service" name="service" required>
+            <option value="MagPro">MagPro — Report + Removable One-Touch</option>
+            <option value="Value">Value — Report Only (Card Saver)</option>
+          </select>
+        </div>
+        <div>
+          <label for="qty">Number of Cards</label>
+          <input id="qty" name="qty" type="number" min="1" value="1"/>
+        </div>
+      </div>
+      <div class="row cols-2">
+        <div>
+          <label for="player">Player</label>
+          <input id="player" name="player" />
+        </div>
+        <div>
+          <label for="set">Set / Year</label>
+          <input id="set" name="set" />
+        </div>
+      </div>
+      <div class="row cols-2">
+        <div>
+          <label for="number">Card #</label>
+          <input id="number" name="number" />
+        </div>
+        <div>
+          <label for="variant">Variant / Parallel (optional)</label>
+          <input id="variant" name="variant" />
+        </div>
+      </div>
+      <div class="row">
+        <label for="notes">Notes</label>
+        <textarea id="notes" name="notes" rows="4" placeholder="Any special instructions or comments..."></textarea>
+      </div>
+      <div class="row">
+        <label><input type="checkbox" name="agree" required/> I understand SlabMetrics provides a suggested grade and non-encapsulated display option.</label>
+      </div>
+      <p><button class="btn btn-primary" type="submit">Create Summary</button></p>
+    </form>
+
+    <div id="submit-summary" class="no-print" style="margin-top:16px;"></div>
+  </div>
+</section>
+  <footer class="site-footer">
+    <div class="container foot">
+      <div class="cols">
+        <div>
+          <strong>SlabMetrics</strong><br/>
+          Transparent suggested grades, pro reports, and flexible display options.
+        </div>
+        <div class="links">
+          <a href="/services.html">Services & Pricing</a>
+          <a href="/big4.html">Big 4 Overview</a>
+          <a href="/emerging.html">Emerging Graders</a>
+          <a href="/grading-101.html">Card Grading 101</a>
+        </div>
+        <div>
+          <a class="btn btn-primary" href="/submit.html">Submit Cards</a>
+        </div>
+      </div>
+      <p class="tiny">© 2025 SlabMetrics. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
