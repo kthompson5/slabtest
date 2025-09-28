@@ -1,0 +1,5 @@
+@media print{
+  header, footer, .no-print { display:none !important; }
+  .print-summary { border:1px solid #000; padding:16px; border-radius:0; }
+  a { color:#000; text-decoration:underline; }
+}
